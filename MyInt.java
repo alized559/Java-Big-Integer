@@ -3,6 +3,7 @@ import java.util.Arrays;
 public class MyInt {
   private int[] nb = new int[25];
 
+  // constructor
   public MyInt(String integer) {
     int count = integer.length() - 1;
     for (int i = this.nb.length - 1; i >= 0 && count >= 0; i--, count--) {
@@ -10,10 +11,12 @@ public class MyInt {
     }
   }
 
+  // copy constructor
   public MyInt(MyInt other) {
     this.nb = other.nb;
   }
 
+  // This method add MyInts
   public MyInt add(MyInt other) {
     int[] sumArray = new int[25];
     int sum = 0, carry = 0;
@@ -25,6 +28,7 @@ public class MyInt {
     return new MyInt(getString(sumArray));
   }
 
+  // This method check if MyInts are equal
   public boolean isEqual(MyInt other) {
     for (int i = 0; i < 25; ++i) {
       if (this.nb[i] != other.nb[i])
@@ -33,6 +37,7 @@ public class MyInt {
     return true;
   }
 
+  // This method compare MyInts
   public int compareTo(MyInt other) {
     if (isEqual(other))
       return 0;
