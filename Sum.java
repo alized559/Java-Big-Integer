@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
 
-public class SumAndSort {
+public class Sum {
   public static void main(String[] args) throws FileNotFoundException {
     File file = new File("Ints.txt");
     sumInts(file);
